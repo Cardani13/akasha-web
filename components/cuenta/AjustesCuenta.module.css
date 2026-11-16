@@ -1,0 +1,42 @@
+.pagina { padding: 120px var(--gutter) 64px; max-width: 760px; margin: 0 auto; }
+.cabecera { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+.titulo { font-family: var(--ff-display); font-weight: 600; font-size: var(--fs-h1); line-height: var(--lh-h1); }
+.intro { color: var(--pergamino-2); overflow-wrap: anywhere; }
+
+.secciones { display: flex; flex-direction: column; gap: 20px; }
+.seccion {
+  display: flex; flex-direction: column; gap: 14px; padding: 24px;
+  background: var(--velo-1); border: 1px solid var(--velo-3); border-radius: var(--radius-md);
+}
+.subtitulo { font-family: var(--ff-display); font-weight: 500; font-size: var(--fs-h2); line-height: var(--lh-h2); }
+.formulario { display: flex; flex-direction: column; gap: 14px; }
+.dosCampos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.campo { display: flex; flex-direction: column; gap: 8px; }
+.etiqueta { font-weight: 500; font-size: var(--fs-meta); line-height: var(--lh-meta); letter-spacing: var(--ls-meta); text-transform: uppercase; color: var(--pergamino-2); }
+.nombreExacto { color: var(--pergamino); text-transform: none; letter-spacing: normal; }
+.input {
+  min-height: 46px; padding: 10px 14px;
+  font: inherit; font-size: 16px; color: var(--pergamino);
+  background: var(--noche); border: 1px solid var(--velo-3); border-radius: var(--radius-sm);
+  transition: border-color var(--dur) var(--ease);
+}
+.input:focus-visible { border-color: var(--oro-grial); box-shadow: none; }
+.ayuda { font-size: 14px; line-height: 21px; color: var(--pergamino-2); }
+
+.error, .exito { padding: 10px 12px; border-radius: var(--radius-sm); font-size: 14px; line-height: 21px; }
+.error { background: color-mix(in srgb, var(--rojo-sello) 14%, transparent); border: 1px solid color-mix(in srgb, var(--rojo-sello) 55%, transparent); }
+.exito { background: color-mix(in srgb, var(--oro-grial) 10%, transparent); border: 1px solid color-mix(in srgb, var(--oro-grial) 50%, transparent); }
+
+.secciones :global(.btn):disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Zona de peligro: borde rojo y botón rojo hueco (el rojo lleno queda para descargar) */
+.peligro { border-color: color-mix(in srgb, var(--rojo-sello) 60%, var(--velo-3)); }
+.peligro .subtitulo { color: var(--rojo-sello-hover); }
+.botonPeligro { border: 1px solid var(--rojo-sello); color: var(--rojo-sello-hover); background: color-mix(in srgb, var(--rojo-sello) 8%, transparent); }
+.botonPeligro:not(:disabled):hover { background: var(--rojo-sello); color: var(--pergamino); }
+
+@media (max-width: 760px) {
+  .pagina { padding-top: 96px; }
+  .seccion { padding: 18px 16px; }
+  .dosCampos { grid-template-columns: 1fr; }
+}

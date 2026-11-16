@@ -1,0 +1,9 @@
+.pagina { padding: 120px var(--gutter) 56px; max-width: 1280px; margin: 0 auto; }
+.cabecera { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+.titulo { font-family: var(--ff-display); font-weight: 600; font-size: var(--fs-h1); line-height: var(--lh-h1); }
+.intro { color: var(--pergamino-2); max-width: 56ch; }
+.rejilla { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 32px 20px; }
+
+@media (max-width: 760px) {
+  .pagina { padding-top: 96px; }
+}

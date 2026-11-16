@@ -1,0 +1,55 @@
+.fila { padding: 0 0 40px; }
+.cabecera { display: flex; align-items: end; justify-content: space-between; padding: 0 var(--gutter); margin-bottom: 16px; }
+.titulo { font-family: var(--ff-display); font-weight: 500; font-size: var(--fs-h2); line-height: var(--lh-h2); }
+
+/* Ancho de cada tarjeta y alto de su portada (para centrar las flechas en la imagen) */
+.poster { --ancho: clamp(150px, 16vw, 220px); --alto-portada: calc(var(--ancho) * 1.5); }
+.miniatura { --ancho: clamp(240px, 24vw, 340px); --alto-portada: calc(var(--ancho) * 9 / 16); }
+
+.carril { position: relative; }
+
+.pista {
+  list-style: none;
+  display: grid; grid-auto-flow: column; grid-auto-columns: var(--ancho); gap: 16px;
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-padding: 0 var(--gutter);
+  padding: 4px var(--gutter) 12px;
+  scrollbar-width: none;
+}
+.pista::-webkit-scrollbar { display: none; }
+.pista > li { scroll-snap-align: start; }
+
+/* Flechas: franjas pegadas a los bordes de la pantalla, a la altura de las portadas */
+.flecha {
+  position: absolute; z-index: 2; top: 4px; height: var(--alto-portada);
+  width: max(var(--gutter), 48px);
+  display: grid; place-items: center;
+  font-size: 40px; line-height: 1; color: var(--pergamino);
+  opacity: 0; transition: opacity var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.izquierda { left: 0; background: linear-gradient(to right, rgba(12, 11, 16, 0.9), rgba(12, 11, 16, 0)); }
+.derecha { right: 0; background: linear-gradient(to left, rgba(12, 11, 16, 0.9), rgba(12, 11, 16, 0)); }
+.carril:hover .flecha, .flecha:focus-visible { opacity: 1; }
+.flecha:hover { color: var(--oro-grial); }
+.flecha span { transform: translateY(-3px); }
+
+/* Tirón: la fila intenta avanzar, no puede y vuelve a su sitio */
+.tironDerecha { animation: tironDerecha 450ms var(--ease); }
+.tironIzquierda { animation: tironIzquierda 450ms var(--ease); }
+@keyframes tironDerecha {
+  0% { transform: translateX(0); }
+  35% { transform: translateX(-28px); }
+  70% { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+@keyframes tironIzquierda {
+  0% { transform: translateX(0); }
+  35% { transform: translateX(28px); }
+  70% { transform: translateX(-6px); }
+  100% { transform: translateX(0); }
+}
+
+/* Teléfono y pantallas táctiles: sin flechas, la fila se desliza con el dedo */
+@media (max-width: 760px), (hover: none) {
+  .flecha { display: none; }
+}

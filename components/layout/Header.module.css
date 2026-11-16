@@ -1,0 +1,44 @@
+.header {
+  position: fixed; inset: 0 0 auto 0; z-index: 50;
+  display: flex; align-items: center; gap: 40px;
+  height: 68px; padding: 0 var(--gutter);
+  /* no-repeat: si el degradado se repite, su parte oscura asoma en el borde inferior como una raya */
+  background: linear-gradient(to bottom, rgba(12, 11, 16, 0.85), rgba(12, 11, 16, 0)) no-repeat;
+  transition: background-color 2s var(--ease), border-color var(--dur) var(--ease);
+  border-bottom: 1px solid transparent;
+}
+.solido { background-color: var(--noche); border-bottom-color: var(--velo-3); }
+
+.nav { display: flex; gap: 28px; font-size: 14px; font-weight: 500; color: var(--pergamino-2); }
+.nav a { position: relative; padding: 6px 0; transition: color var(--dur) var(--ease); }
+.nav a:hover { color: var(--pergamino); }
+.activo { color: var(--pergamino); }
+.activo::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -2px;
+  height: 1px; background: var(--oro-grial);
+}
+
+/* Lupa y cuenta, pegadas a la derecha */
+.acciones { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+
+.menu { display: none; place-items: center; width: 40px; height: 40px; margin-left: -8px; color: var(--pergamino); }
+
+/* Teléfono: los enlaces se esconden detrás del botón de menú */
+@media (max-width: 760px) {
+  .header { gap: 8px; height: 60px; }
+  .menu { display: grid; }
+  .acciones { gap: 4px; }
+  .nav {
+    display: none;
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; gap: 0;
+    padding: 8px var(--gutter) 16px;
+    background: var(--noche); border-bottom: 1px solid var(--velo-3);
+    font-size: 17px;
+  }
+  .nav.abierto { display: flex; }
+  .nav a { padding: 14px 0; border-bottom: 1px solid var(--velo-2); }
+  .nav a:last-child { border-bottom: 0; }
+  .activo { color: var(--oro-grial); }
+  .activo::after { display: none; }
+}

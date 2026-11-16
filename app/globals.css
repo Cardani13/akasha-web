@@ -1,0 +1,137 @@
+/*
+ * AKASHA · tokens de diseño
+ * Fuente: "AKASHA Manual de Marca" v1.1 (páginas 09–15 y 20).
+ * Proporción de uso en pantalla: 68 Noche · 14 Velo · 10 Pergamino · 5 Oro · 3 Rojo.
+ * El rojo es escaso a propósito: si aparece, es porque hay algo que pulsar.
+ */
+:root {
+  /* Paleta principal */
+  --noche: #0c0b10;            /* Noche de Fuyuki · fondo base */
+  --velo-1: #16141c;           /* Velo · superficies */
+  --velo-2: #211e29;           /* Velo · superficies elevadas */
+  --velo-3: #2e2a36;           /* Velo · bordes */
+  --rojo-sello: #c21a23;       /* Acción principal */
+  --rojo-sello-hover: #e0353d;
+  --oro-grial: #c9a45c;        /* Detalle y foco */
+  --azul-excalibur: #2e4fa8;   /* Información */
+  --pergamino: #efe9df;        /* Texto */
+  --pergamino-2: #a49c92;      /* Texto secundario */
+
+  /* Colores por ruta: solo insignias, barra de progreso y halo del banner */
+  --ruta-fate2006: #2e4fa8;    /* Azul Excalibur */
+  --ruta-ubw: #c21a23;         /* Rojo Sello */
+  --ruta-hf: #7b3f8c;          /* Sakura Sombra */
+  --ruta-zero: #b4582a;        /* Ámbar Brasa */
+  --ruta-fgo: #4c9bd1;         /* Celeste Caldea */
+  --ruta-spinoff: #3f7a5f;     /* Verde Taumaturgo */
+
+  /* Tipografía (las variables --font-* las inyecta next/font en layout.tsx) */
+  --ff-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --ff-ui: var(--font-instrument), "Instrument Sans", system-ui, sans-serif;
+  --ff-jp: var(--font-shippori), "Shippori Mincho", serif;
+
+  /* Jerarquía web: tamaño / interlínea */
+  --fs-display: 72px;  --lh-display: 76px;   /* Cormorant 600 */
+  --fs-h1: 48px;       --lh-h1: 52px;        /* Cormorant 500 */
+  --fs-h2: 32px;       --lh-h2: 38px;        /* Cormorant 500 */
+  --fs-card: 18px;     --lh-card: 24px;      /* Instrument 600 */
+  --fs-body: 16px;     --lh-body: 26px;      /* Instrument 400 */
+  --fs-meta: 13px;     --lh-meta: 18px;      /* Instrument 500 · +0.14em */
+  --ls-meta: 0.14em;
+
+  /* Espaciado, radios y movimiento */
+  --gutter: clamp(16px, 4vw, 56px);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);  /* ease-out, sin rebotes */
+  --dur: 240ms;                             /* fundidos de 200–300 ms */
+  --focus-ring: 0 0 0 2px var(--noche), 0 0 0 4px var(--oro-grial);
+}
+
+@media (max-width: 720px) {
+  :root {
+    --fs-display: 44px; --lh-display: 48px;
+    --fs-h1: 36px;      --lh-h1: 40px;
+    --fs-h2: 26px;      --lh-h2: 32px;
+  }
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { color-scheme: dark; }
+
+body {
+  background: var(--noche);
+  color: var(--pergamino);
+  font-family: var(--ff-ui);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+img[src*="placeholder"] { object-position: center !important; } /* portada provisional: centrar el sello */
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+:focus-visible { outline: none; box-shadow: var(--focus-ring); border-radius: var(--radius-sm); }
+
+/* Metadato: ZIP · 1080P · 15,84 GB */
+.meta {
+  font-family: var(--ff-ui);
+  font-weight: 500;
+  font-size: var(--fs-meta);
+  line-height: var(--lh-meta);
+  letter-spacing: var(--ls-meta);
+  text-transform: uppercase;
+  color: var(--pergamino-2);
+}
+
+/* Corchetes lenticulares: 【 RUTA UBW 】 — una sola etiqueta por elemento */
+.lenticular { color: var(--oro-grial); }
+.lenticular::before { content: "【"; }
+.lenticular::after { content: "】"; }
+
+/* Botones */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  min-height: 44px; padding: 10px 20px; line-height: 22px;
+  border-radius: var(--radius-sm);
+  font-weight: 600; font-size: 15px;
+  transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+.btn-primary { background: var(--rojo-sello); color: var(--pergamino); }
+.btn-primary:hover { background: var(--rojo-sello-hover); }
+.btn-secondary { border: 1px solid var(--pergamino); color: var(--pergamino); }
+.btn-secondary:hover { border-color: var(--oro-grial); }
+/* Oro: para "lo siguiente que ver", que no se confunda con los botones rojos de descarga */
+.btn-oro { border: 1px solid var(--oro-grial); color: var(--oro-grial); background: color-mix(in srgb, var(--oro-grial) 10%, transparent); }
+.btn-oro:hover { background: color-mix(in srgb, var(--oro-grial) 20%, transparent); }
+.btn .rombo { width: 8px; height: 8px; background: currentColor; transform: rotate(45deg); }
+.botones { display: flex; flex-wrap: wrap; gap: 12px; } /* fila de varios botones */
+
+/* Filete con rombo: línea Oro Grial de 1 px y rombo de 8 px */
+.filete { display: flex; align-items: center; gap: 12px; color: var(--oro-grial); }
+.filete::before, .filete::after { content: ""; flex: 1; height: 1px; background: currentColor; opacity: 0.5; }
+.filete > span { width: 8px; height: 8px; background: currentColor; transform: rotate(45deg); }
+
+/* Transición entre secciones (View Transitions, ver <ViewTransition> en layout.tsx):
+   la página vieja se desvanece y la nueva entra subiendo desde un ligero desenfoque.
+   La raíz y la cabecera no se animan para que el cambio se lea solo en el contenido.
+   El nombre de la cabecera va aquí y no en su módulo CSS, que lo renombraría. */
+body > header { view-transition-name: cabecera; }
+::view-transition-old(root), ::view-transition-new(root),
+::view-transition-old(cabecera), ::view-transition-new(cabecera) { animation: none; }
+::view-transition-group(.akasha-pagina) { animation-duration: 250ms; }
+::view-transition-old(.akasha-pagina) { animation: akasha-salir 150ms var(--ease) both; }
+::view-transition-new(.akasha-pagina) { animation: akasha-entrar 250ms var(--ease) both; }
+@keyframes akasha-salir { to { opacity: 0; } }
+@keyframes akasha-entrar { from { opacity: 0; transform: translateY(12px); filter: blur(4px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0ms !important; animation-duration: 0ms !important; scroll-behavior: auto !important; }
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}

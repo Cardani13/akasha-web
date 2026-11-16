@@ -1,0 +1,1436 @@
+{
+  "version": 1,
+  "actualizado": "2026-10-13",
+  "notas": [
+    "Datos de referencia escritos de memoria; las entradas con 'verificar' necesitan una comprobación.",
+    "Las imágenes apuntan a las portadas que están en public/imagenes/portadas. Las demás usan /imagenes/portadas/placeholder.svg.",
+    "'ruta' reutiliza las claves de color de globals.css (--ruta-*). 'linea' indica el mundo o línea temporal."
+  ],
+  "tipos": {
+    "serie": "Serie de TV",
+    "pelicula": "Película",
+    "ova": "OVA",
+    "especial": "Especial de TV",
+    "novela_visual": "Novela visual",
+    "videojuego": "Videojuego",
+    "novela": "Novela"
+  },
+  "lineas": {
+    "fsn": "Mundo base de Fate/stay night (Fuyuki). Incluye Fate/Zero y Lord El-Melloi II.",
+    "apocrypha": "Mundo alternativo: el Grial de Fuyuki fue robado durante la Tercera Guerra.",
+    "strange-fake": "Mundo alternativo derivado de Fate/stay night, con una guerra falsa en Estados Unidos.",
+    "prototype": "Versión primitiva de Fate, ambientada en Tokio.",
+    "extra": "La Guerra del Grial digital del Moon Cell, en un mundo donde la magia casi desapareció.",
+    "fgo": "La Historia Humana Correcta de Chaldea; mezcla elementos de todas las líneas.",
+    "prisma-illya": "Mundos paralelos donde Illya vive como una niña normal.",
+    "samurai-remnant": "Guerra del Grial en el Japón de Edo.",
+    "tsukihime": "Mundo de Tsukihime, compartido de forma laxa con Kara no Kyoukai.",
+    "kara-no-kyoukai": "Mundo de Kara no Kyoukai, conectado con Tsukihime y Mahoyo.",
+    "mahoyo": "Precuela lejana de Tsukihime y Kara no Kyoukai (Aoko y Touko Aozaki).",
+    "comedia": "Sin canon: parodias."
+  },
+  "sagas": [
+    {
+      "id": "stay-night",
+      "titulo": "Fate/stay night",
+      "ruta": "ubw",
+      "descripcion": "La Quinta Guerra del Grial en Fuyuki y sus tres rutas.",
+      "obras": [
+        "fsn-vn",
+        "fsn-remastered",
+        "fha-vn",
+        "fsn-2006",
+        "ubw-2010",
+        "ubw-2014",
+        "emiya-gohan"
+      ]
+    },
+    {
+      "id": "heavens-feel",
+      "titulo": "Heaven's Feel",
+      "ruta": "hf",
+      "descripcion": "La trilogía de películas de la ruta de Sakura.",
+      "obras": [
+        "hf-1",
+        "hf-2",
+        "hf-3"
+      ]
+    },
+    {
+      "id": "zero",
+      "titulo": "Fate/Zero",
+      "ruta": "zero",
+      "descripcion": "La Cuarta Guerra del Grial, diez años antes.",
+      "obras": [
+        "zero-novela",
+        "zero"
+      ]
+    },
+    {
+      "id": "el-melloi",
+      "titulo": "Lord El-Melloi II",
+      "ruta": "spinoff",
+      "descripcion": "Waver Velvet en la Torre del Reloj.",
+      "obras": [
+        "el-melloi"
+      ]
+    },
+    {
+      "id": "apocrypha",
+      "titulo": "Fate/Apocrypha",
+      "ruta": "spinoff",
+      "descripcion": "La Gran Guerra del Grial: Rojo contra Negro.",
+      "obras": [
+        "apocrypha"
+      ]
+    },
+    {
+      "id": "strange-fake",
+      "titulo": "Fate/strange Fake",
+      "ruta": "spinoff",
+      "descripcion": "La Falsa Guerra del Grial en Snowfield.",
+      "obras": [
+        "strange-fake-dawn",
+        "strange-fake"
+      ]
+    },
+    {
+      "id": "prototype",
+      "titulo": "Fate/Prototype",
+      "ruta": "spinoff",
+      "descripcion": "El borrador original de Fate.",
+      "obras": [
+        "prototype",
+        "prototype-sogin"
+      ]
+    },
+    {
+      "id": "extra",
+      "titulo": "Fate/EXTRA",
+      "ruta": "spinoff",
+      "descripcion": "La Guerra del Grial en la Luna, dentro del Moon Cell.",
+      "obras": [
+        "extra",
+        "extra-ccc",
+        "extella",
+        "extella-link",
+        "last-encore"
+      ]
+    },
+    {
+      "id": "grand-order",
+      "titulo": "Fate/Grand Order",
+      "ruta": "fgo",
+      "descripcion": "Chaldea y la Orden de Restauración de la humanidad.",
+      "obras": [
+        "fgo-juego",
+        "fgo-first-order",
+        "fgo-moonlight",
+        "fgo-camelot-1",
+        "fgo-camelot-2",
+        "fgo-babylonia",
+        "fgo-solomon"
+      ]
+    },
+    {
+      "id": "prisma-illya",
+      "titulo": "Prisma☆Illya",
+      "ruta": "spinoff",
+      "descripcion": "Illya como magical girl, en un mundo alternativo.",
+      "obras": [
+        "illya-1",
+        "illya-2wei",
+        "illya-herz",
+        "illya-3rei",
+        "illya-oath",
+        "illya-phantasm",
+        "illya-licht"
+      ]
+    },
+    {
+      "id": "otros-juegos",
+      "titulo": "Otros juegos de Fate",
+      "ruta": "spinoff",
+      "descripcion": "Juegos de Fate fuera de las sagas principales.",
+      "obras": [
+        "unlimited-codes",
+        "samurai-remnant"
+      ]
+    },
+    {
+      "id": "parodias",
+      "titulo": "Parodias",
+      "ruta": "spinoff",
+      "descripcion": "El Nasuverse riéndose de sí mismo.",
+      "obras": [
+        "fgo-carnival",
+        "carnival-phantasm"
+      ]
+    },
+    {
+      "id": "tsukihime",
+      "titulo": "Tsukihime",
+      "ruta": "spinoff",
+      "descripcion": "Vampiros, los ojos místicos y el origen de TYPE-MOON.",
+      "obras": [
+        "tsukihime-2000",
+        "kagetsu-tohya",
+        "melty-blood",
+        "shingetsutan",
+        "tsukihime-remake",
+        "melty-lumina"
+      ]
+    },
+    {
+      "id": "kara-no-kyoukai",
+      "titulo": "Kara no Kyoukai",
+      "ruta": "spinoff",
+      "descripcion": "The Garden of Sinners: Shiki Ryougi y lo sobrenatural en los 90.",
+      "obras": [
+        "knk-1",
+        "knk-2",
+        "knk-3",
+        "knk-4",
+        "knk-5",
+        "knk-6",
+        "knk-7",
+        "knk-epilogo",
+        "knk-mirai"
+      ]
+    },
+    {
+      "id": "mahoyo",
+      "titulo": "Witch on the Holy Night",
+      "ruta": "spinoff",
+      "descripcion": "Aoko Aozaki antes de ser la Magia Azul.",
+      "obras": [
+        "mahoyo-vn",
+        "mahoyo-film"
+      ]
+    }
+  ],
+  "obras": [
+    {
+      "id": "fsn-vn",
+      "titulo": "Fate/stay night",
+      "tipo": "novela_visual",
+      "anio": 2004,
+      "fecha": "2004-01-30",
+      "estudio": "TYPE-MOON",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "stay-night",
+      "linea": "fsn",
+      "ruta": "fate2006",
+      "epoca": "Fuyuki, 2004",
+      "sinopsis": "La novela visual original. Shirou Emiya entra por accidente en la Quinta Guerra del Grial junto a Saber. Tiene tres rutas: Fate, Unlimited Blade Works y Heaven's Feel.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true,
+      "nota": "Fate/stay night [Réalta Nua] (2007) es la versión para todas las edades con voces."
+    },
+    {
+      "id": "fsn-remastered",
+      "titulo": "Fate/stay night REMASTERED",
+      "tipo": "novela_visual",
+      "anio": 2024,
+      "fecha": "2024-08-08",
+      "estudio": "TYPE-MOON",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "stay-night",
+      "linea": "fsn",
+      "ruta": "fate2006",
+      "epoca": "Fuyuki, 2004",
+      "sinopsis": "Remasterización de la novela visual con traducción oficial al inglés, para PC y Switch. La forma más cómoda de leer las tres rutas hoy.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "fha-vn",
+      "titulo": "Fate/hollow ataraxia",
+      "tipo": "novela_visual",
+      "anio": 2005,
+      "fecha": "2005-10-28",
+      "estudio": "TYPE-MOON",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "stay-night",
+      "linea": "fsn",
+      "ruta": "fate2006",
+      "epoca": "Fuyuki, medio año después de la Quinta Guerra",
+      "sinopsis": "Secuela de la novela visual. Bazett y Avenger reviven en bucle cuatro días en Fuyuki, con mucho tiempo para la vida cotidiana de los personajes.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "fsn-2006",
+      "titulo": "Fate/stay night",
+      "tipo": "serie",
+      "anio": 2006,
+      "fecha": "2006-01-06",
+      "estudio": "Studio DEEN",
+      "episodios": 24,
+      "franquicia": "Fate",
+      "saga": "stay-night",
+      "linea": "fsn",
+      "ruta": "fate2006",
+      "epoca": "Fuyuki, 2004",
+      "sinopsis": "Primera adaptación al anime, centrada en la ruta Fate: Shirou y Saber en la Quinta Guerra del Grial.",
+      "imagen": "/imagenes/portadas/Fate_Stay_Night2006.jpg",
+      "imagenEsPlaceholder": false
+    },
+    {
+      "id": "ubw-2010",
+      "titulo": "Fate/stay night: Unlimited Blade Works (película)",
+      "tipo": "pelicula",
+      "anio": 2010,
+      "fecha": "2010-01-23",
+      "estudio": "Studio DEEN",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "stay-night",
+      "linea": "fsn",
+      "ruta": "ubw",
+      "epoca": "Fuyuki, 2004",
+      "sinopsis": "Condensación de la ruta de Rin y Archer en una película. Muy comprimida; la serie de 2014 la sustituye con creces.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "ubw-2014",
+      "titulo": "Fate/stay night [Unlimited Blade Works]",
+      "tituloOriginal": "Fate/stay night [Unlimited Blade Works]",
+      "tipo": "serie",
+      "anio": 2014,
+      "fecha": "2014-10-04",
+      "estudio": "ufotable",
+      "episodios": 26,
+      "franquicia": "Fate",
+      "saga": "stay-night",
+      "linea": "fsn",
+      "ruta": "ubw",
+      "epoca": "Fuyuki, 2004",
+      "sinopsis": "La ruta de Rin Tohsaka y Archer. Shirou se enfrenta a lo que significa de verdad su ideal de ser un héroe de la justicia.",
+      "imagen": "/imagenes/portadas/Fate_Stay_NightUnlimited.jpg",
+      "imagenEsPlaceholder": false,
+      "nota": "25 episodios más el prólogo #00. Emitida en dos temporadas (2014 y 2015)."
+    },
+    {
+      "id": "hf-1",
+      "titulo": "Heaven's Feel I. presage flower",
+      "tipo": "pelicula",
+      "anio": 2017,
+      "fecha": "2017-10-14",
+      "estudio": "ufotable",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "heavens-feel",
+      "linea": "fsn",
+      "ruta": "hf",
+      "epoca": "Fuyuki, 2004",
+      "sinopsis": "Primera película de la ruta de Sakura Matou. Algo oscuro recorre Fuyuki y la guerra empieza a torcerse.",
+      "imagen": "/imagenes/portadas/Fate_Stay_Night_HavensFeel.jpg",
+      "imagenEsPlaceholder": false
+    },
+    {
+      "id": "hf-2",
+      "titulo": "Heaven's Feel II. lost butterfly",
+      "tipo": "pelicula",
+      "anio": 2019,
+      "fecha": "2019-01-12",
+      "estudio": "ufotable",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "heavens-feel",
+      "linea": "fsn",
+      "ruta": "hf",
+      "epoca": "Fuyuki, 2004",
+      "sinopsis": "Shirou tiene que elegir entre su ideal y proteger a Sakura, mientras la Sombra devora la ciudad.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "hf-3",
+      "titulo": "Heaven's Feel III. spring song",
+      "tipo": "pelicula",
+      "anio": 2020,
+      "fecha": "2020-08-15",
+      "estudio": "ufotable",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "heavens-feel",
+      "linea": "fsn",
+      "ruta": "hf",
+      "epoca": "Fuyuki, 2004",
+      "sinopsis": "El cierre de la trilogía y de la ruta más oscura de Fate/stay night.",
+      "imagen": "/imagenes/portadas/Fate_Stay_Night_HF.jpg",
+      "imagenEsPlaceholder": false
+    },
+    {
+      "id": "emiya-gohan",
+      "titulo": "La comida de hoy en casa de los Emiya",
+      "tituloOriginal": "Emiya-san Chi no Kyou no Gohan",
+      "tipo": "serie",
+      "anio": 2018,
+      "fecha": "2018-01-01",
+      "estudio": "ufotable",
+      "episodios": 13,
+      "franquicia": "Fate",
+      "saga": "stay-night",
+      "linea": "fsn",
+      "ruta": "fate2006",
+      "epoca": "Fuyuki, sin guerra",
+      "sinopsis": "Episodios cortos y tranquilos en los que Shirou y compañía cocinan platos de temporada. Sin batallas.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true,
+      "nota": "Episodios web mensuales de unos 13 minutos."
+    },
+    {
+      "id": "zero-novela",
+      "titulo": "Fate/Zero (novela)",
+      "tipo": "novela",
+      "anio": 2006,
+      "fecha": "2006-12-29",
+      "estudio": "Gen Urobuchi · TYPE-MOON",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "zero",
+      "linea": "fsn",
+      "ruta": "zero",
+      "epoca": "Fuyuki, 1994",
+      "sinopsis": "Novela ligera de Gen Urobuchi que cuenta la Cuarta Guerra del Grial. Base de la serie de ufotable.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "zero",
+      "titulo": "Fate/Zero",
+      "tipo": "serie",
+      "anio": 2011,
+      "fecha": "2011-10-01",
+      "estudio": "ufotable",
+      "episodios": 25,
+      "franquicia": "Fate",
+      "saga": "zero",
+      "linea": "fsn",
+      "ruta": "zero",
+      "epoca": "Fuyuki, 1994",
+      "sinopsis": "La Cuarta Guerra del Grial, diez años antes de stay night. Kiritsugu Emiya, Kirei Kotomine y el origen de todo lo que viene después.",
+      "imagen": "/imagenes/portadas/Fate_Zero.jpg",
+      "imagenEsPlaceholder": false,
+      "nota": "Emitida en dos temporadas (2011 y 2012)."
+    },
+    {
+      "id": "el-melloi",
+      "titulo": "Lord El-Melloi II's Case Files {Rail Zeppelin} Grace note",
+      "tipo": "serie",
+      "anio": 2019,
+      "fecha": "2019-07-06",
+      "estudio": "TROYCA",
+      "episodios": 13,
+      "franquicia": "Fate",
+      "saga": "el-melloi",
+      "linea": "fsn",
+      "ruta": "spinoff",
+      "epoca": "Torre del Reloj, Londres, ~2003",
+      "sinopsis": "Waver Velvet, ya profesor en la Torre del Reloj, resuelve misterios del mundo de los magos junto a su aprendiz Gray.",
+      "imagen": "/imagenes/portadas/Fate_LordEl-Melloi.jpg",
+      "imagenEsPlaceholder": false,
+      "nota": "Hay un episodio 0 especial emitido en diciembre de 2018. Mejor después de Fate/Zero."
+    },
+    {
+      "id": "apocrypha",
+      "titulo": "Fate/Apocrypha",
+      "tipo": "serie",
+      "anio": 2017,
+      "fecha": "2017-07-01",
+      "estudio": "A-1 Pictures",
+      "episodios": 25,
+      "franquicia": "Fate",
+      "saga": "apocrypha",
+      "linea": "apocrypha",
+      "ruta": "spinoff",
+      "epoca": "Rumanía, años 2000 (mundo alternativo)",
+      "sinopsis": "En un mundo donde el Grial de Fuyuki fue robado en la Tercera Guerra, la Facción Roja y la Facción Negra libran una Gran Guerra del Grial de catorce Servants.",
+      "imagen": "/imagenes/portadas/Fate_Apocrypha.jpg",
+      "imagenEsPlaceholder": false
+    },
+    {
+      "id": "strange-fake-dawn",
+      "titulo": "Fate/strange Fake -Whispers of Dawn-",
+      "tipo": "especial",
+      "anio": 2023,
+      "fecha": "2023-07-02",
+      "estudio": "A-1 Pictures",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "strange-fake",
+      "linea": "strange-fake",
+      "ruta": "spinoff",
+      "epoca": "Snowfield, Nevada",
+      "sinopsis": "Especial de una hora que prepara el terreno: en Snowfield empieza una Guerra del Grial falsa, y entre los Servants falsos aparece uno verdadero.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "strange-fake",
+      "titulo": "Fate/strange Fake",
+      "tipo": "serie",
+      "anio": 2025,
+      "estudio": "A-1 Pictures",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "strange-fake",
+      "linea": "strange-fake",
+      "ruta": "spinoff",
+      "epoca": "Snowfield, Nevada",
+      "sinopsis": "La serie completa de la Falsa Guerra del Grial, adaptando las novelas de Ryohgo Narita.",
+      "imagen": "/imagenes/portadas/Fate_StrangeFake.jpg",
+      "imagenEsPlaceholder": false,
+      "verificar": "Fecha de estreno y número de episodios: revisar con una fuente actual."
+    },
+    {
+      "id": "prototype",
+      "titulo": "Fate/Prototype",
+      "tipo": "ova",
+      "anio": 2011,
+      "estudio": null,
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "prototype",
+      "linea": "prototype",
+      "ruta": "spinoff",
+      "epoca": "Tokio, 1999",
+      "sinopsis": "Corto que adapta el borrador original de Fate: Ayaka Sajyou y un Saber que es el Rey Arturo en persona.",
+      "imagen": "/imagenes/portadas/Fate_Prototype.jpg",
+      "imagenEsPlaceholder": false,
+      "nota": "Unos 12 minutos. Salió como extra en la edición de Carnival Phantasm.",
+      "verificar": "Estudio de animación y fecha exacta."
+    },
+    {
+      "id": "prototype-sogin",
+      "titulo": "Fate/Prototype: Fragmentos de Plata Celeste",
+      "tituloOriginal": "Fate/Prototype: Sougin no Fragments",
+      "tipo": "novela",
+      "anio": 2013,
+      "estudio": "Hikaru Sakurai · TYPE-MOON",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "prototype",
+      "linea": "prototype",
+      "ruta": "spinoff",
+      "epoca": "Tokio, 1991",
+      "sinopsis": "Precuela del corto: la primera Guerra del Grial de Tokio, ocho años antes.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "extra",
+      "titulo": "Fate/EXTRA",
+      "tipo": "videojuego",
+      "anio": 2010,
+      "fecha": "2010-07-22",
+      "estudio": "Image Epoch · TYPE-MOON",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "extra",
+      "linea": "extra",
+      "ruta": "spinoff",
+      "epoca": "SE.RA.PH, dentro del Moon Cell",
+      "sinopsis": "RPG de mazmorras: un estudiante sin memoria despierta en una Guerra del Grial virtual dentro de una supercomputadora en la Luna.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true,
+      "nota": "PSP. Hay un remake anunciado, Fate/EXTRA Record.",
+      "verificar": "Estado del remake Fate/EXTRA Record."
+    },
+    {
+      "id": "extra-ccc",
+      "titulo": "Fate/EXTRA CCC",
+      "tipo": "videojuego",
+      "anio": 2013,
+      "fecha": "2013-03-28",
+      "estudio": "Image Epoch · TYPE-MOON",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "extra",
+      "linea": "extra",
+      "ruta": "spinoff",
+      "epoca": "SE.RA.PH, dentro del Moon Cell",
+      "sinopsis": "Secuela alternativa de EXTRA: los participantes quedan atrapados en las profundidades del Moon Cell con BB.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "extella",
+      "titulo": "Fate/EXTELLA: The Umbral Star",
+      "tipo": "videojuego",
+      "anio": 2016,
+      "fecha": "2016-11-10",
+      "estudio": "Marvelous",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "extra",
+      "linea": "extra",
+      "ruta": "spinoff",
+      "epoca": "SE.RA.PH, tras EXTRA",
+      "sinopsis": "Juego de acción multitudinaria que continúa la historia de EXTRA tras la victoria del protagonista.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "extella-link",
+      "titulo": "Fate/EXTELLA LINK",
+      "tipo": "videojuego",
+      "anio": 2018,
+      "fecha": "2018-06-07",
+      "estudio": "Marvelous",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "extra",
+      "linea": "extra",
+      "ruta": "spinoff",
+      "epoca": "SE.RA.PH",
+      "sinopsis": "Nueva aventura de acción en el Moon Cell con Charlemagne y un reparto ampliado.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "last-encore",
+      "titulo": "Fate/EXTRA Last Encore",
+      "tipo": "serie",
+      "anio": 2018,
+      "fecha": "2018-01-27",
+      "estudio": "Shaft",
+      "episodios": 13,
+      "franquicia": "Fate",
+      "saga": "extra",
+      "linea": "extra",
+      "ruta": "spinoff",
+      "epoca": "SE.RA.PH, mil años después",
+      "sinopsis": "Hakuno Kishinami despierta en una Guerra del Grial abandonada en la Luna y sube estrato a estrato junto a Saber (Nero).",
+      "imagen": "/imagenes/portadas/Fate_LastEncore.jpg",
+      "imagenEsPlaceholder": false,
+      "nota": "10 episodios más los 3 de Illustrias Geocentric Theory."
+    },
+    {
+      "id": "fgo-juego",
+      "titulo": "Fate/Grand Order",
+      "tipo": "videojuego",
+      "anio": 2015,
+      "fecha": "2015-07-30",
+      "estudio": "Delightworks / Lasengle",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "grand-order",
+      "linea": "fgo",
+      "ruta": "fgo",
+      "epoca": "Chaldea, 2015–2017",
+      "sinopsis": "El juego para móviles. La humanidad se ha extinguido y Chaldea viaja por la historia para reparar siete Singularidades.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true,
+      "nota": "En curso. Es la fuente de toda la línea Grand Order."
+    },
+    {
+      "id": "fgo-first-order",
+      "titulo": "Fate/Grand Order: First Order",
+      "tipo": "especial",
+      "anio": 2016,
+      "fecha": "2016-12-31",
+      "estudio": "Lay-duce",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "grand-order",
+      "linea": "fgo",
+      "ruta": "fgo",
+      "epoca": "Chaldea y Fuyuki 2004 (Singularidad F)",
+      "sinopsis": "El prólogo: Ritsuka Fujimaru y Mash Kyrielight llegan a una Fuyuki en llamas y comienza la Orden de Restauración.",
+      "imagen": "/imagenes/portadas/Fate_GrandOrder_First.jpg",
+      "imagenEsPlaceholder": false
+    },
+    {
+      "id": "fgo-moonlight",
+      "titulo": "Fate/Grand Order: Moonlight/Lostroom",
+      "tipo": "especial",
+      "anio": 2017,
+      "fecha": "2017-12-31",
+      "estudio": "Lay-duce",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "grand-order",
+      "linea": "fgo",
+      "ruta": "fgo",
+      "epoca": "Chaldea",
+      "sinopsis": "Especial breve centrado en Mash y un encuentro misterioso. Prescindible para la trama.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "fgo-camelot-1",
+      "titulo": "Camelot: Wandering; Agateram",
+      "tituloOriginal": "Fate/Grand Order: Shinsei Entaku Ryouiki Camelot 1",
+      "tipo": "pelicula",
+      "anio": 2020,
+      "fecha": "2020-12-05",
+      "estudio": "Signal.MD",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "grand-order",
+      "linea": "fgo",
+      "ruta": "fgo",
+      "epoca": "Jerusalén, 1273 (Sexta Singularidad)",
+      "sinopsis": "Chaldea llega a una Tierra Santa dominada por el Rey León y sus Caballeros de la Mesa Redonda. Bedivere los acompaña.",
+      "imagen": "/imagenes/portadas/Fate_GrandOrder_Camelot.jpg",
+      "imagenEsPlaceholder": false
+    },
+    {
+      "id": "fgo-camelot-2",
+      "titulo": "Camelot: Paladin; Agateram",
+      "tituloOriginal": "Fate/Grand Order: Shinsei Entaku Ryouiki Camelot 2",
+      "tipo": "pelicula",
+      "anio": 2021,
+      "fecha": "2021-05-15",
+      "estudio": "Production I.G",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "grand-order",
+      "linea": "fgo",
+      "ruta": "fgo",
+      "epoca": "Jerusalén, 1273 (Sexta Singularidad)",
+      "sinopsis": "La batalla final contra el Rey León y el destino de Bedivere.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "fgo-babylonia",
+      "titulo": "Fate/Grand Order: Absolute Demonic Front Babylonia",
+      "tipo": "serie",
+      "anio": 2019,
+      "fecha": "2019-10-05",
+      "estudio": "CloverWorks",
+      "episodios": 21,
+      "franquicia": "Fate",
+      "saga": "grand-order",
+      "linea": "fgo",
+      "ruta": "fgo",
+      "epoca": "Uruk, 2655 a. C. (Séptima Singularidad)",
+      "sinopsis": "La Séptima Singularidad: Chaldea defiende la Uruk del rey Gilgamesh frente a las Diosas Tres.",
+      "imagen": "/imagenes/portadas/Fate_GrandOrder_Babylonia.webp",
+      "imagenEsPlaceholder": false,
+      "nota": "Tiene además un episodio 0, «Initium Iter»."
+    },
+    {
+      "id": "fgo-solomon",
+      "titulo": "Final Singularity: Grand Temple of Time Solomon",
+      "tipo": "pelicula",
+      "anio": 2021,
+      "fecha": "2021-07-30",
+      "estudio": "CloverWorks",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "grand-order",
+      "linea": "fgo",
+      "ruta": "fgo",
+      "epoca": "Templo del Tiempo",
+      "sinopsis": "El enfrentamiento con el Rey Mago Salomón y el final de la primera parte de Grand Order.",
+      "imagen": "/imagenes/portadas/Fate_GrandOrder_Final_Singularity.jpg",
+      "imagenEsPlaceholder": false
+    },
+    {
+      "id": "fgo-carnival",
+      "titulo": "Fate/Grand Carnival",
+      "tipo": "ova",
+      "anio": 2021,
+      "estudio": "Lay-duce",
+      "episodios": 8,
+      "franquicia": "Fate",
+      "saga": "parodias",
+      "linea": "comedia",
+      "ruta": "spinoff",
+      "epoca": "Ninguna",
+      "sinopsis": "Parodia de Grand Order al estilo de Carnival Phantasm, con eventos absurdos del juego.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true,
+      "nota": "Dos partes de 4 episodios."
+    },
+    {
+      "id": "illya-1",
+      "titulo": "Fate/kaleid liner Prisma☆Illya",
+      "tipo": "serie",
+      "anio": 2013,
+      "fecha": "2013-07-13",
+      "estudio": "SILVER LINK.",
+      "episodios": 10,
+      "franquicia": "Fate",
+      "saga": "prisma-illya",
+      "linea": "prisma-illya",
+      "ruta": "spinoff",
+      "epoca": "Fuyuki (mundo alternativo)",
+      "sinopsis": "Illya, una chica normal, se convierte en magical girl gracias a Ruby, una vara mágica muy parlanchina, y tiene que recuperar las Class Cards.",
+      "imagen": "/imagenes/portadas/Fate_Kaleid.webp",
+      "imagenEsPlaceholder": false
+    },
+    {
+      "id": "illya-2wei",
+      "titulo": "Prisma☆Illya 2wei!",
+      "tipo": "serie",
+      "anio": 2014,
+      "estudio": "SILVER LINK.",
+      "episodios": 10,
+      "franquicia": "Fate",
+      "saga": "prisma-illya",
+      "linea": "prisma-illya",
+      "ruta": "spinoff",
+      "epoca": "Fuyuki (mundo alternativo)",
+      "sinopsis": "Aparece Kuro, una Illya inesperada, y las cosas se complican en casa y en el colegio.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "illya-herz",
+      "titulo": "Prisma☆Illya 2wei Herz!",
+      "tipo": "serie",
+      "anio": 2015,
+      "estudio": "SILVER LINK.",
+      "episodios": 10,
+      "franquicia": "Fate",
+      "saga": "prisma-illya",
+      "linea": "prisma-illya",
+      "ruta": "spinoff",
+      "epoca": "Fuyuki (mundo alternativo)",
+      "sinopsis": "Tercera temporada: verano, playa y una nueva amenaza ligada a las Class Cards.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "illya-3rei",
+      "titulo": "Prisma☆Illya 3rei!!",
+      "tipo": "serie",
+      "anio": 2016,
+      "estudio": "SILVER LINK.",
+      "episodios": 12,
+      "franquicia": "Fate",
+      "saga": "prisma-illya",
+      "linea": "prisma-illya",
+      "ruta": "spinoff",
+      "epoca": "Mundo de Miyu",
+      "sinopsis": "El tono se oscurece: Illya viaja al mundo de origen de Miyu, donde hay una Guerra del Grial en marcha.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "illya-oath",
+      "titulo": "Prisma☆Illya: Juramento bajo la nieve",
+      "tituloOriginal": "Fate/kaleid liner Prisma☆Illya: Sekka no Chikai",
+      "tipo": "pelicula",
+      "anio": 2017,
+      "fecha": "2017-08-26",
+      "estudio": "SILVER LINK.",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "prisma-illya",
+      "linea": "prisma-illya",
+      "ruta": "spinoff",
+      "epoca": "Mundo de Miyu, años antes",
+      "sinopsis": "Película precuela que cuenta la historia de Shirou y Miyu en el mundo de ella. Se puede ver tras 3rei!!",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "illya-phantasm",
+      "titulo": "Prisma☆Phantasm",
+      "tipo": "ova",
+      "anio": 2019,
+      "fecha": "2019-06-14",
+      "estudio": "SILVER LINK.",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "prisma-illya",
+      "linea": "prisma-illya",
+      "ruta": "spinoff",
+      "epoca": "Ninguna",
+      "sinopsis": "Película corta de comedia pura, sin peso en la trama.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "illya-licht",
+      "titulo": "Prisma☆Illya: Licht – La chica sin nombre",
+      "tituloOriginal": "Fate/kaleid liner Prisma☆Illya: Licht Namae no Nai Shoujo",
+      "tipo": "pelicula",
+      "anio": 2021,
+      "fecha": "2021-08-27",
+      "estudio": "SILVER LINK.",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "prisma-illya",
+      "linea": "prisma-illya",
+      "ruta": "spinoff",
+      "epoca": "Mundo de Miyu",
+      "sinopsis": "Continúa la historia tras 3rei!!: Illya y compañía buscan la forma de salvar a Miyu.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "unlimited-codes",
+      "titulo": "Fate/unlimited codes",
+      "tipo": "videojuego",
+      "anio": 2008,
+      "estudio": "Cavia · 8ing",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "otros-juegos",
+      "linea": "fsn",
+      "ruta": "spinoff",
+      "epoca": "Fuyuki, sin canon",
+      "sinopsis": "Juego de lucha con los Servants y Masters de stay night.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true,
+      "verificar": "Fecha exacta de salida (arcade 2008)."
+    },
+    {
+      "id": "samurai-remnant",
+      "titulo": "Fate/Samurai Remnant",
+      "tipo": "videojuego",
+      "anio": 2023,
+      "fecha": "2023-09-28",
+      "estudio": "Koei Tecmo · Omega Force",
+      "episodios": null,
+      "franquicia": "Fate",
+      "saga": "otros-juegos",
+      "linea": "samurai-remnant",
+      "ruta": "spinoff",
+      "epoca": "Edo, 1651",
+      "sinopsis": "Una Guerra del Grial en el Japón del periodo Edo: el Ritual de los Ganchos de Cerezo. Acción con Miyamoto Iori y su Saber.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "carnival-phantasm",
+      "titulo": "Carnival Phantasm",
+      "tipo": "ova",
+      "anio": 2011,
+      "fecha": "2011-08-13",
+      "estudio": "Lerche",
+      "episodios": 12,
+      "franquicia": "Fate",
+      "saga": "parodias",
+      "linea": "comedia",
+      "ruta": "spinoff",
+      "epoca": "Ninguna",
+      "sinopsis": "Comedia de sketches con personajes de Fate, Tsukihime y Kara no Kyoukai. Se disfruta más conociendo todo lo demás.",
+      "imagen": "/imagenes/portadas/Fate_CarnivalPhantas.webp",
+      "imagenEsPlaceholder": false
+    },
+    {
+      "id": "tsukihime-2000",
+      "titulo": "Tsukihime",
+      "tipo": "novela_visual",
+      "anio": 2000,
+      "fecha": "2000-12-29",
+      "estudio": "TYPE-MOON",
+      "episodios": null,
+      "franquicia": "Tsukihime",
+      "saga": "tsukihime",
+      "linea": "tsukihime",
+      "ruta": "spinoff",
+      "epoca": "Misaki, ~2000",
+      "sinopsis": "La obra que dio origen a TYPE-MOON. Shiki Tohno, capaz de ver las líneas de la muerte, se cruza con la vampira Arcueid.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "kagetsu-tohya",
+      "titulo": "Kagetsu Tohya",
+      "tipo": "novela_visual",
+      "anio": 2001,
+      "estudio": "TYPE-MOON",
+      "episodios": null,
+      "franquicia": "Tsukihime",
+      "saga": "tsukihime",
+      "linea": "tsukihime",
+      "ruta": "spinoff",
+      "epoca": "Misaki, tras Tsukihime",
+      "sinopsis": "Fan disc de Tsukihime: Shiki revive en sueños el mismo día una y otra vez.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "melty-blood",
+      "titulo": "Melty Blood",
+      "tipo": "videojuego",
+      "anio": 2002,
+      "estudio": "French-Bread · TYPE-MOON",
+      "episodios": null,
+      "franquicia": "Tsukihime",
+      "saga": "tsukihime",
+      "linea": "tsukihime",
+      "ruta": "spinoff",
+      "epoca": "Misaki, tras Tsukihime",
+      "sinopsis": "Juego de lucha que continúa la historia de Tsukihime con Sion Eltnam Atlasia.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "shingetsutan",
+      "titulo": "Shingetsutan Tsukihime",
+      "tipo": "serie",
+      "anio": 2003,
+      "fecha": "2003-10-09",
+      "estudio": "J.C.Staff",
+      "episodios": 12,
+      "franquicia": "Tsukihime",
+      "saga": "tsukihime",
+      "linea": "tsukihime",
+      "ruta": "spinoff",
+      "epoca": "Misaki",
+      "sinopsis": "Adaptación libre al anime de la ruta de Arcueid. Poco fiel; mejor leer la novela.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "tsukihime-remake",
+      "titulo": "Tsukihime -A piece of blue glass moon-",
+      "tipo": "novela_visual",
+      "anio": 2021,
+      "fecha": "2021-08-26",
+      "estudio": "TYPE-MOON",
+      "episodios": null,
+      "franquicia": "Tsukihime",
+      "saga": "tsukihime",
+      "linea": "tsukihime",
+      "ruta": "spinoff",
+      "epoca": "Misaki",
+      "sinopsis": "Remake completo de la primera mitad de Tsukihime (rutas de Arcueid y Ciel). Traducción oficial al inglés desde 2024.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "melty-lumina",
+      "titulo": "Melty Blood: Type Lumina",
+      "tipo": "videojuego",
+      "anio": 2021,
+      "fecha": "2021-09-30",
+      "estudio": "French-Bread",
+      "episodios": null,
+      "franquicia": "Tsukihime",
+      "saga": "tsukihime",
+      "linea": "tsukihime",
+      "ruta": "spinoff",
+      "epoca": "Misaki (continuidad del remake)",
+      "sinopsis": "Juego de lucha moderno basado en el remake de Tsukihime.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "knk-1",
+      "titulo": "Kara no Kyoukai 1: Vista panorámica",
+      "tituloOriginal": "Fukan Fuukei",
+      "tipo": "pelicula",
+      "anio": 2007,
+      "fecha": "2007-12-01",
+      "estudio": "ufotable",
+      "episodios": null,
+      "franquicia": "Kara no Kyoukai",
+      "saga": "kara-no-kyoukai",
+      "linea": "kara-no-kyoukai",
+      "ruta": "spinoff",
+      "epoca": "Septiembre de 1998",
+      "sinopsis": "Una serie de suicidios en un edificio abandonado. Shiki Ryougi y Mikiya Kokutou investigan.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "knk-2",
+      "titulo": "Kara no Kyoukai 2: Estudio de un asesinato (I)",
+      "tituloOriginal": "Satsujin Kousatsu (Zen)",
+      "tipo": "pelicula",
+      "anio": 2007,
+      "estudio": "ufotable",
+      "episodios": null,
+      "franquicia": "Kara no Kyoukai",
+      "saga": "kara-no-kyoukai",
+      "linea": "kara-no-kyoukai",
+      "ruta": "spinoff",
+      "epoca": "Febrero de 1995",
+      "sinopsis": "Cómo se conocieron Mikiya y Shiki, en medio de unos asesinatos en serie.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "knk-3",
+      "titulo": "Kara no Kyoukai 3: Dolor residual",
+      "tituloOriginal": "Tsuukaku Zanryuu",
+      "tipo": "pelicula",
+      "anio": 2008,
+      "estudio": "ufotable",
+      "episodios": null,
+      "franquicia": "Kara no Kyoukai",
+      "saga": "kara-no-kyoukai",
+      "linea": "kara-no-kyoukai",
+      "ruta": "spinoff",
+      "epoca": "Julio de 1998",
+      "sinopsis": "Shiki se enfrenta a Fujino Asagami, una chica capaz de torcer cosas con la mirada.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "knk-4",
+      "titulo": "Kara no Kyoukai 4: El santuario vacío",
+      "tituloOriginal": "Garan no Dou",
+      "tipo": "pelicula",
+      "anio": 2008,
+      "estudio": "ufotable",
+      "episodios": null,
+      "franquicia": "Kara no Kyoukai",
+      "saga": "kara-no-kyoukai",
+      "linea": "kara-no-kyoukai",
+      "ruta": "spinoff",
+      "epoca": "1996–1998",
+      "sinopsis": "Shiki despierta del coma y descubre los ojos místicos de la percepción de la muerte.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "knk-5",
+      "titulo": "Kara no Kyoukai 5: Espiral de la paradoja",
+      "tituloOriginal": "Mujun Rasen",
+      "tipo": "pelicula",
+      "anio": 2008,
+      "estudio": "ufotable",
+      "episodios": null,
+      "franquicia": "Kara no Kyoukai",
+      "saga": "kara-no-kyoukai",
+      "linea": "kara-no-kyoukai",
+      "ruta": "spinoff",
+      "epoca": "Noviembre de 1998",
+      "sinopsis": "Un edificio de apartamentos imposible y el mago Souren Araya. Considerada la cumbre de la saga.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "knk-6",
+      "titulo": "Kara no Kyoukai 6: Grabación del olvido",
+      "tituloOriginal": "Boukyaku Rokuon",
+      "tipo": "pelicula",
+      "anio": 2008,
+      "estudio": "ufotable",
+      "episodios": null,
+      "franquicia": "Kara no Kyoukai",
+      "saga": "kara-no-kyoukai",
+      "linea": "kara-no-kyoukai",
+      "ruta": "spinoff",
+      "epoca": "Enero de 1999",
+      "sinopsis": "Azaka, la hermana de Mikiya, investiga un caso de hadas en su colegio.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "knk-7",
+      "titulo": "Kara no Kyoukai 7: Estudio de un asesinato (II)",
+      "tituloOriginal": "Satsujin Kousatsu (Kou)",
+      "tipo": "pelicula",
+      "anio": 2009,
+      "estudio": "ufotable",
+      "episodios": null,
+      "franquicia": "Kara no Kyoukai",
+      "saga": "kara-no-kyoukai",
+      "linea": "kara-no-kyoukai",
+      "ruta": "spinoff",
+      "epoca": "Febrero de 1999",
+      "sinopsis": "Vuelven los asesinatos y Shiki tiene que enfrentarse a quién es en realidad.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "knk-epilogo",
+      "titulo": "Kara no Kyoukai: Epílogo",
+      "tipo": "ova",
+      "anio": 2011,
+      "estudio": "ufotable",
+      "episodios": null,
+      "franquicia": "Kara no Kyoukai",
+      "saga": "kara-no-kyoukai",
+      "linea": "kara-no-kyoukai",
+      "ruta": "spinoff",
+      "epoca": "Marzo de 1999",
+      "sinopsis": "Una conversación bajo la nieve que cierra la historia principal.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "knk-mirai",
+      "titulo": "Kara no Kyoukai: Evangelio futuro",
+      "tituloOriginal": "Mirai Fukuin",
+      "tipo": "pelicula",
+      "anio": 2013,
+      "estudio": "ufotable",
+      "episodios": null,
+      "franquicia": "Kara no Kyoukai",
+      "saga": "kara-no-kyoukai",
+      "linea": "kara-no-kyoukai",
+      "ruta": "spinoff",
+      "epoca": "1998 y 2008",
+      "sinopsis": "Historias paralelas y un vistazo al futuro de Shiki y Mikiya. Para ver al final.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    },
+    {
+      "id": "mahoyo-vn",
+      "titulo": "Witch on the Holy Night",
+      "tituloOriginal": "Mahoutsukai no Yoru",
+      "tipo": "novela_visual",
+      "anio": 2012,
+      "fecha": "2012-04-12",
+      "estudio": "TYPE-MOON",
+      "episodios": null,
+      "franquicia": "Mahoutsukai no Yoru",
+      "saga": "mahoyo",
+      "linea": "mahoyo",
+      "ruta": "spinoff",
+      "epoca": "Misaki, finales de los 80",
+      "sinopsis": "Aoko Aozaki y Alice Kuonji, dos magas que comparten casa, acogen a un chico de campo que ha visto demasiado.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true,
+      "nota": "Remasterizada en 2022 con traducción oficial al inglés."
+    },
+    {
+      "id": "mahoyo-film",
+      "titulo": "Witch on the Holy Night (película)",
+      "tituloOriginal": "Mahoutsukai no Yoru",
+      "tipo": "pelicula",
+      "anio": 2024,
+      "fecha": "2024-12-13",
+      "estudio": "ufotable",
+      "episodios": null,
+      "franquicia": "Mahoutsukai no Yoru",
+      "saga": "mahoyo",
+      "linea": "mahoyo",
+      "ruta": "spinoff",
+      "epoca": "Misaki, finales de los 80",
+      "sinopsis": "Adaptación al cine de la novela visual por ufotable.",
+      "imagen": "/imagenes/portadas/placeholder.svg",
+      "imagenEsPlaceholder": true
+    }
+  ],
+  "ordenes": {
+    "recomendado": {
+      "titulo": "Orden recomendado",
+      "descripcion": "El orden para ver todo lo importante de Fate.",
+      "pasos": [
+        {
+          "paso": 1,
+          "titulo": "Fate/stay night (2006)",
+          "detalle": "24 capítulos",
+          "obras": [
+            "fsn-2006"
+          ]
+        },
+        {
+          "paso": 2,
+          "titulo": "Fate/Zero",
+          "detalle": "2 temporadas: 13 + 12 capítulos",
+          "obras": [
+            "zero"
+          ]
+        },
+        {
+          "paso": 3,
+          "titulo": "Fate/stay night: Unlimited Blade Works",
+          "detalle": "Prólogo (47 min), 2 temporadas de 12 capítulos y el especial Sunny Day (9 min)",
+          "obras": [
+            "ubw-2014"
+          ]
+        },
+        {
+          "paso": 4,
+          "titulo": "Fate/stay night: Heaven's Feel",
+          "detalle": "3 películas: Presage Flower, Lost Butterfly y Spring Song",
+          "obras": [
+            "hf-1",
+            "hf-2",
+            "hf-3"
+          ]
+        },
+        {
+          "paso": 5,
+          "titulo": "Fate/Apocrypha",
+          "detalle": "Serie de 25 capítulos",
+          "obras": [
+            "apocrypha"
+          ]
+        },
+        {
+          "paso": 6,
+          "titulo": "Fate/Grand Order",
+          "detalle": "4 películas y una serie de 24 capítulos",
+          "obras": [
+            "fgo-first-order",
+            "fgo-camelot-1",
+            "fgo-camelot-2",
+            "fgo-babylonia",
+            "fgo-solomon"
+          ]
+        },
+        {
+          "paso": 7,
+          "titulo": "Fate/strange Fake",
+          "detalle": "El especial Whispers of Dawn y la serie",
+          "obras": [
+            "strange-fake-dawn",
+            "strange-fake"
+          ]
+        },
+        {
+          "paso": 8,
+          "titulo": "Lord El-Melloi II",
+          "detalle": "1 temporada y un especial",
+          "obras": [
+            "el-melloi"
+          ]
+        },
+        {
+          "paso": 9,
+          "titulo": "Fate/kaleid liner Prisma☆Illya",
+          "detalle": "3 temporadas y 2 películas",
+          "obras": [
+            "illya-1",
+            "illya-2wei",
+            "illya-herz",
+            "illya-3rei",
+            "illya-oath",
+            "illya-licht"
+          ]
+        },
+        {
+          "paso": 10,
+          "titulo": "Fate/EXTRA Last Encore",
+          "detalle": "Serie",
+          "obras": [
+            "last-encore"
+          ]
+        }
+      ]
+    },
+    "principal": {
+      "titulo": "Ruta principal",
+      "descripcion": "Lo imprescindible: la Quinta Guerra del Grial y su precuela.",
+      "pasos": [
+        {
+          "paso": 1,
+          "titulo": "Fate/stay night (2006)",
+          "detalle": "24 capítulos",
+          "obras": [
+            "fsn-2006"
+          ]
+        },
+        {
+          "paso": 2,
+          "titulo": "Fate/Zero",
+          "detalle": "2 temporadas: 13 + 12 capítulos",
+          "obras": [
+            "zero"
+          ]
+        },
+        {
+          "paso": 3,
+          "titulo": "Fate/stay night: Unlimited Blade Works",
+          "detalle": "Prólogo (47 min), 2 temporadas de 12 capítulos y el especial Sunny Day (9 min)",
+          "obras": [
+            "ubw-2014"
+          ]
+        },
+        {
+          "paso": 4,
+          "titulo": "Fate/stay night: Heaven's Feel",
+          "detalle": "3 películas: Presage Flower, Lost Butterfly y Spring Song",
+          "obras": [
+            "hf-1",
+            "hf-2",
+            "hf-3"
+          ]
+        }
+      ]
+    },
+    "extras": {
+      "titulo": "Extras",
+      "descripcion": "Extras que vale la pena ver.",
+      "pasos": [
+        {
+          "paso": 1,
+          "titulo": "Fate/Prototype",
+          "detalle": "OVA",
+          "obras": [
+            "prototype"
+          ]
+        },
+        {
+          "paso": 2,
+          "titulo": "Emiya-san Chi no Kyou no Gohan",
+          "detalle": "La comida de hoy en casa de los Emiya",
+          "obras": [
+            "emiya-gohan"
+          ]
+        },
+        {
+          "paso": 3,
+          "titulo": "Kara no Kyoukai",
+          "detalle": "Películas en orden de estreno",
+          "obras": [
+            "knk-1",
+            "knk-2",
+            "knk-3",
+            "knk-4",
+            "knk-5",
+            "knk-6",
+            "knk-7",
+            "knk-epilogo",
+            "knk-mirai"
+          ]
+        },
+        {
+          "paso": 4,
+          "titulo": "Carnival Phantasm",
+          "detalle": "Velo como mínimo después de Fate/stay night, Tsukihime y Kara no Kyoukai: es un crossover",
+          "obras": [
+            "carnival-phantasm"
+          ]
+        },
+        {
+          "paso": 5,
+          "titulo": "Fate/Grand Carnival",
+          "detalle": "OVA",
+          "obras": [
+            "fgo-carnival"
+          ]
+        },
+        {
+          "paso": 6,
+          "titulo": "Tsukihime",
+          "detalle": "Serie",
+          "obras": [
+            "shingetsutan"
+          ]
+        }
+      ]
+    },
+    "universo": {
+      "titulo": "Universo completo",
+      "descripcion": "Todo el Fate animado. Meramente informativo: no hace falta verlo entero.",
+      "pendiente": true,
+      "pasos": []
+    }
+  },
+  "ordenCronologico": {
+    "kara-no-kyoukai": [
+      "knk-2",
+      "knk-4",
+      "knk-3",
+      "knk-1",
+      "knk-5",
+      "knk-6",
+      "knk-7",
+      "knk-epilogo",
+      "knk-mirai"
+    ]
+  }
+}

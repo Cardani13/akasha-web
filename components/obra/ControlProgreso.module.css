@@ -1,0 +1,47 @@
+.control { display: flex; flex-direction: column; gap: 10px; }
+
+/* Cuatro botones seguidos; el activo en Oro Grial (el rojo queda para descargar) */
+.estados { display: flex; flex-wrap: wrap; gap: 8px; }
+.estado {
+  min-height: 40px; padding: 8px 16px;
+  font-size: 14px; font-weight: 500; color: var(--pergamino-2);
+  border: 1px solid var(--velo-3); border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--velo-1) 70%, transparent);
+  transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease), background-color var(--dur) var(--ease);
+}
+.estado:hover { color: var(--pergamino); border-color: var(--pergamino-2); }
+.estado:disabled { cursor: wait; }
+.activo, .activo:hover {
+  color: var(--oro-grial); border-color: var(--oro-grial);
+  background: color-mix(in srgb, var(--oro-grial) 14%, transparent);
+}
+
+.episodios { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 14px; color: var(--pergamino-2); }
+.numero {
+  width: 76px; height: 40px; padding: 0 10px;
+  font: inherit; font-size: 16px; color: var(--pergamino);
+  background: var(--noche); border: 1px solid var(--velo-3); border-radius: var(--radius-sm);
+}
+.numero:focus-visible { border-color: var(--oro-grial); box-shadow: none; }
+.total { color: var(--pergamino-2); }
+.guardar {
+  height: 40px; padding: 0 14px; font-size: 14px; font-weight: 600;
+  border: 1px solid var(--pergamino-2); border-radius: var(--radius-sm);
+  transition: border-color var(--dur) var(--ease);
+}
+.guardar:hover { border-color: var(--oro-grial); }
+.guardar:disabled { opacity: 0.6; cursor: wait; }
+
+.estadoGuardado { font-size: 13px; color: var(--pergamino-2); }
+.aviso, .error {
+  display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline;
+  padding: 10px 12px; border-radius: var(--radius-sm); font-size: 14px; line-height: 21px;
+}
+.aviso { background: color-mix(in srgb, var(--oro-grial) 10%, transparent); border: 1px solid color-mix(in srgb, var(--oro-grial) 45%, transparent); }
+.error { background: color-mix(in srgb, var(--rojo-sello) 14%, transparent); border: 1px solid color-mix(in srgb, var(--rojo-sello) 55%, transparent); }
+.enlace { color: var(--oro-grial); font-weight: 600; }
+.enlace:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 480px) {
+  .estados { display: grid; grid-template-columns: 1fr 1fr; }
+}

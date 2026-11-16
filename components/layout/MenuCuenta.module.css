@@ -1,0 +1,50 @@
+.hueco { display: block; width: 72px; height: 36px; }
+
+/* Sin sesión: botón secundario compacto (el rojo queda para las descargas) */
+.entrar {
+  display: inline-flex; align-items: center; height: 36px; padding: 0 16px;
+  font-size: 14px; font-weight: 600; white-space: nowrap;
+  border: 1px solid var(--pergamino-2); border-radius: var(--radius-sm);
+  transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.entrar:hover { border-color: var(--oro-grial); color: var(--oro-grial); }
+
+.caja { position: relative; }
+.usuario {
+  display: inline-flex; align-items: center; gap: 10px; height: 40px; padding: 0 6px 0 4px;
+  font-size: 14px; font-weight: 500; color: var(--pergamino-2);
+  border-radius: var(--radius-sm);
+  transition: color var(--dur) var(--ease);
+}
+.usuario:hover, .usuario[aria-expanded="true"] { color: var(--pergamino); }
+.inicial {
+  display: grid; place-items: center; width: 30px; height: 30px; flex: none;
+  font-family: var(--ff-display); font-weight: 600; font-size: 17px; color: var(--oro-grial);
+  border: 1px solid var(--oro-grial); border-radius: 50%;
+  background: color-mix(in srgb, var(--oro-grial) 10%, transparent);
+}
+.nombre { max-width: 14ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.menu {
+  position: absolute; top: calc(100% + 8px); right: 0; min-width: 200px;
+  display: flex; flex-direction: column; padding: 6px;
+  background: var(--velo-1); border: 1px solid var(--velo-3); border-radius: var(--radius-md);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+.cabecera {
+  display: flex; flex-direction: column; gap: 2px; padding: 8px 10px 10px; margin-bottom: 4px;
+  border-bottom: 1px solid var(--velo-3);
+  font-weight: 600; overflow-wrap: anywhere;
+}
+.opcion {
+  display: block; width: 100%; padding: 9px 10px; text-align: left;
+  font-size: 14px; color: var(--pergamino-2); border-radius: var(--radius-sm);
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.opcion:hover { background: var(--velo-2); color: var(--pergamino); }
+
+@media (max-width: 760px) {
+  .nombre { display: none; } /* en el teléfono basta la inicial */
+  .usuario { padding: 0 2px; gap: 4px; }
+  .entrar { padding: 0 12px; }
+}

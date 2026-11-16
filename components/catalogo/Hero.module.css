@@ -1,0 +1,93 @@
+/* Banner 21:9 · degradado lateral 95 → 0 % + base 100 → 0 % (manual, pág. 13) */
+.hero {
+  position: relative;
+  min-height: min(82vh, 760px);
+  display: flex; align-items: flex-end;
+  padding: 120px var(--gutter) 72px;
+  overflow: hidden;
+  isolation: isolate;
+}
+.arte {
+  position: absolute; inset: 0 0 0 30%; z-index: -2;
+  opacity: 0; transition: opacity 900ms var(--ease);
+}
+.arte.visible { opacity: 1; }
+.img { object-fit: cover; object-position: center 15%; } /* encuadre por los rostros */
+
+.degradado {
+  position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(to right, rgba(12, 11, 16, 0.95) 30%, rgba(12, 11, 16, 0) 70%),
+    linear-gradient(to top, rgba(12, 11, 16, 1) 0%, rgba(12, 11, 16, 0) 45%),
+    radial-gradient(60% 80% at 75% 40%, color-mix(in srgb, var(--halo) 22%, transparent), transparent 70%);
+}
+
+/* Flechas laterales: franjas a todo lo alto, como las de los carruseles; aparecen al pasar el cursor */
+.flecha {
+  position: absolute; z-index: 2; top: 0; bottom: 0;
+  width: max(var(--gutter), 56px);
+  display: grid; place-items: center;
+  font-size: 44px; line-height: 1; color: var(--pergamino);
+  opacity: 0; transition: opacity var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.izquierda { left: 0; background: linear-gradient(to right, rgba(12, 11, 16, 0.9), rgba(12, 11, 16, 0)); }
+.derecha { right: 0; background: linear-gradient(to left, rgba(12, 11, 16, 0.9), rgba(12, 11, 16, 0)); }
+.hero:hover .flecha, .flecha:focus-visible { opacity: 1; }
+.flecha:hover { color: var(--oro-grial); }
+.flecha span { transform: translateY(-3px); }
+
+/* Todos los textos ocupan la misma celda; solo se ve el de la obra actual */
+.columna { display: flex; flex-direction: column; gap: 32px; max-width: 620px; width: 100%; position: relative; z-index: 3; }
+.contenidos { display: grid; width: fit-content; max-width: 100%; }
+.contenido {
+  grid-area: 1 / 1; align-self: end;
+  display: flex; flex-direction: column; gap: 16px;
+  opacity: 0; visibility: hidden;
+  transition: opacity 600ms var(--ease), visibility 0s linear 600ms;
+}
+.contenido.visible { opacity: 1; visibility: visible; transition: opacity 600ms var(--ease) 200ms, visibility 0s; }
+
+/* Indicadores: una barra por obra; la activa se llena en dorado mientras dura */
+.indicadores { display: flex; gap: 8px; }
+.indicador { width: 36px; height: 20px; display: grid; align-items: center; }
+.indicador span { display: block; height: 3px; border-radius: 2px; background: var(--velo-3); position: relative; overflow: hidden; }
+.indicador:hover span { background: var(--pergamino-2); }
+.activo span::after {
+  content: ""; position: absolute; inset: 0; background: var(--oro-grial);
+  transform-origin: left; animation: llenar linear forwards; animation-duration: inherit; animation-play-state: inherit;
+}
+@keyframes llenar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+.titulo {
+  font-family: var(--ff-display);
+  font-weight: 600;
+  font-size: var(--fs-display);
+  line-height: var(--lh-display);
+  letter-spacing: -0.01em;
+}
+.sinopsis { color: var(--pergamino-2); max-width: 46ch; }
+.acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .arte, .contenido, .contenido.visible { transition: none; }
+  .activo span::after { animation: none; transform: none; }
+}
+
+/* Escritorio: el texto empieza después de la flecha izquierda para que no se tapen */
+@media (min-width: 761px) and (hover: hover) {
+  .hero { padding-left: max(var(--gutter), 56px); }
+}
+
+/* Teléfono y pantallas táctiles: sin flechas */
+@media (max-width: 760px), (hover: none) {
+  .flecha { display: none; }
+}
+
+@media (max-width: 760px) {
+  .arte { inset: 0; }
+  .degradado {
+    background:
+      linear-gradient(to top, rgba(12, 11, 16, 1) 25%, rgba(12, 11, 16, 0.2) 80%),
+      radial-gradient(80% 60% at 50% 30%, color-mix(in srgb, var(--halo) 22%, transparent), transparent 70%);
+  }
+}

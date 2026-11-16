@@ -1,0 +1,56 @@
+.tarjeta { display: flex; flex-direction: column; gap: 10px; }
+
+.marco {
+  position: relative; overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--velo-1);
+  border: 1px solid var(--velo-3);
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.poster .marco { aspect-ratio: 2 / 3; }
+.miniatura .marco { aspect-ratio: 16 / 9; }
+
+.img { object-fit: cover; object-position: center top; transition: opacity var(--dur) var(--ease); }
+
+.tarjeta:hover .marco { border-color: var(--oro-grial); transform: translateY(-3px); }
+
+/* Barra de progreso en el color de la ruta */
+.barra { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: rgba(12, 11, 16, 0.7); }
+.barra span { display: block; height: 100%; background: var(--ruta); }
+
+.texto { display: flex; flex-direction: column; gap: 2px; }
+.nombre { font-weight: 600; font-size: 15px; line-height: 20px; }
+.miniatura .nombre { font-size: var(--fs-card); line-height: var(--lh-card); }
+
+@media (prefers-reduced-motion: reduce) {
+  .tarjeta:hover .marco { transform: none; }
+}
+
+/* Panel con la descripción: aparece con un fundido al dejar el cursor sobre la portada */
+.resumen {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 14px;
+  background: rgba(22, 20, 28, 0.94);
+  opacity: 0; visibility: hidden;
+  transition: opacity 250ms var(--ease), visibility 0s linear 250ms;
+}
+.resumenTitulo { font-weight: 600; font-size: 15px; line-height: 20px; }
+.resumen :global(.meta) { font-size: 11px; line-height: 16px; }
+.sinopsis {
+  font-size: 13px; line-height: 19px; color: var(--pergamino-2);
+  display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden;
+}
+.acciones {
+  margin-top: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px;
+  font-size: 12px; font-weight: 600; color: var(--oro-grial);
+}
+.descarga { color: var(--pergamino-2); font-weight: 500; }
+
+@media (hover: hover) {
+  .tarjeta:hover .resumen,
+  .tarjeta:focus-visible .resumen {
+    opacity: 1; visibility: visible;
+    transition: opacity 250ms var(--ease) 300ms, visibility 0s linear 300ms; /* espera un poco para no parpadear */
+  }
+}

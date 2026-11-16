@@ -1,0 +1,28 @@
+.cabecera {
+  position: relative; overflow: hidden; isolation: isolate;
+  padding: 140px var(--gutter) 48px;
+  min-height: 420px; display: flex; align-items: flex-end;
+}
+
+/* Fondo: la portada de la saga, oscurecida, con el halo de la ruta */
+.fondo { position: absolute; inset: 0; z-index: -1; opacity: 0.35; }
+.fondoImg { object-fit: cover; object-position: center 20%; filter: blur(6px) saturate(1.1); transform: scale(1.05); }
+.fondo::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(to top, var(--noche) 5%, transparent 70%),
+    linear-gradient(to right, var(--noche) 0%, transparent 80%),
+    radial-gradient(60% 80% at 15% 70%, color-mix(in srgb, var(--halo) 30%, transparent), transparent 70%);
+}
+
+.contenido { display: flex; flex-direction: column; gap: 16px; max-width: 720px; }
+.volver { color: var(--pergamino-2); }
+.volver:hover { color: var(--pergamino); }
+.titulo { font-family: var(--ff-display); font-weight: 600; font-size: var(--fs-display); line-height: var(--lh-display); }
+.descripcion { font-size: 17px; line-height: 28px; }
+.linea { color: var(--pergamino-2); border-left: 2px solid var(--oro-grial); padding-left: 14px; }
+.progreso { display: flex; flex-direction: column; gap: 8px; max-width: 360px; }
+
+@media (max-width: 760px) {
+  .cabecera { padding-top: 110px; min-height: 0; }
+}

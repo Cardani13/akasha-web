@@ -1,0 +1,48 @@
+/* Formularios de cuenta: una tarjeta Velo centrada sobre la Noche */
+.pagina {
+  min-height: 100vh; display: grid; place-items: center;
+  padding: 112px var(--gutter) 64px;
+  background: radial-gradient(ellipse 60% 40% at 50% 0%, color-mix(in srgb, var(--oro-grial) 8%, transparent), transparent 70%);
+}
+.tarjeta {
+  width: 100%; max-width: 440px;
+  display: flex; flex-direction: column; gap: 24px;
+  padding: 40px 36px;
+  background: var(--velo-1); border: 1px solid var(--velo-3); border-radius: var(--radius-md);
+}
+.cabecera { display: flex; flex-direction: column; gap: 10px; text-align: center; }
+.titulo { font-family: var(--ff-display); font-weight: 500; font-size: var(--fs-h1); line-height: var(--lh-h1); }
+.intro { color: var(--pergamino-2); font-size: 15px; line-height: 24px; }
+
+.formulario { display: flex; flex-direction: column; gap: 18px; }
+.campo { display: flex; flex-direction: column; gap: 8px; }
+.etiqueta { font-weight: 500; font-size: var(--fs-meta); line-height: var(--lh-meta); letter-spacing: var(--ls-meta); text-transform: uppercase; color: var(--pergamino-2); }
+.input {
+  min-height: 46px; padding: 10px 14px;
+  font: inherit; font-size: 16px; color: var(--pergamino);
+  background: var(--noche); border: 1px solid var(--velo-3); border-radius: var(--radius-sm);
+  transition: border-color var(--dur) var(--ease);
+}
+.input::placeholder { color: color-mix(in srgb, var(--pergamino-2) 60%, transparent); }
+.input:hover { border-color: color-mix(in srgb, var(--pergamino-2) 50%, var(--velo-3)); }
+.input:focus-visible { border-color: var(--oro-grial); box-shadow: none; outline: none; }
+.input[aria-invalid="true"] { border-color: var(--rojo-sello); }
+.ayuda { font-size: 13px; line-height: 18px; color: var(--pergamino-2); }
+
+.enviar { justify-content: center; width: 100%; margin-top: 6px; }
+.enviar:disabled { opacity: 0.6; cursor: wait; }
+
+.error, .exito { padding: 12px 14px; border-radius: var(--radius-sm); font-size: 14px; line-height: 21px; color: var(--pergamino); }
+.error { background: color-mix(in srgb, var(--rojo-sello) 14%, transparent); border: 1px solid color-mix(in srgb, var(--rojo-sello) 55%, transparent); }
+.exito { background: color-mix(in srgb, var(--oro-grial) 10%, transparent); border: 1px solid color-mix(in srgb, var(--oro-grial) 50%, transparent); }
+
+.pie { display: flex; flex-direction: column; gap: 8px; align-items: center; font-size: 14px; color: var(--pergamino-2); text-align: center; }
+.enlace { color: var(--oro-grial); }
+.enlace:hover { text-decoration: underline; text-underline-offset: 3px; }
+.olvido { align-self: flex-end; font-size: 13px; color: var(--pergamino-2); margin-top: -6px; }
+.olvido:hover { color: var(--pergamino); }
+
+@media (max-width: 480px) {
+  .pagina { padding-top: 88px; align-items: start; }
+  .tarjeta { padding: 28px 20px; gap: 20px; }
+}

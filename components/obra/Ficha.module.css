@@ -1,0 +1,46 @@
+/* Cabecera de la página de una obra: póster a la izquierda y datos a la derecha */
+.ficha {
+  position: relative;
+  display: grid; grid-template-columns: minmax(200px, 320px) 1fr; gap: 48px; align-items: start;
+  padding: 120px var(--gutter) 56px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Fondo: la misma portada, muy desenfocada y oscurecida, con el halo de la ruta */
+.fondo { position: absolute; inset: 0; z-index: -1; opacity: 0.25; }
+.fondoImg { object-fit: cover; filter: blur(40px) saturate(1.2); transform: scale(1.2); }
+.fondo::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(to top, var(--noche) 0%, transparent 60%),
+    radial-gradient(60% 80% at 20% 30%, color-mix(in srgb, var(--halo) 30%, transparent), transparent 70%);
+}
+
+.poster {
+  position: relative; aspect-ratio: 2 / 3;
+  border-radius: var(--radius-md); overflow: hidden;
+  border: 1px solid var(--velo-3); background: var(--velo-1);
+}
+.posterImg { object-fit: cover; object-position: center top; }
+
+.contenido { display: flex; flex-direction: column; gap: 16px; max-width: 720px; }
+.titulo { font-family: var(--ff-display); font-weight: 600; font-size: var(--fs-h1); line-height: var(--lh-h1); }
+.original { color: var(--oro-grial); font-style: italic; margin-top: -8px; }
+.sinopsis { font-size: 17px; line-height: 28px; }
+.nota { color: var(--pergamino-2); border-left: 2px solid var(--oro-grial); padding-left: 14px; }
+
+.datos {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px 24px;
+  padding: 20px 0; border-top: 1px solid var(--velo-3); border-bottom: 1px solid var(--velo-3);
+}
+.datos dd { margin-top: 4px; }
+.enlace { text-decoration: underline; text-decoration-color: var(--oro-grial); text-underline-offset: 4px; }
+.enlace:hover { color: var(--oro-grial); }
+
+.orden { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+
+@media (max-width: 760px) {
+  .ficha { grid-template-columns: 1fr; gap: 24px; padding-top: 96px; }
+  .poster { width: min(60vw, 260px); }
+}

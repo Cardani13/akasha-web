@@ -1,0 +1,65 @@
+.caja { position: relative; display: inline-flex; align-items: center; gap: 12px; }
+
+.principal {
+  display: inline-flex; align-items: center; gap: 6px; padding: 4px 0;
+  font-size: 13px; font-weight: 600; color: var(--pergamino-2);
+  user-select: none; -webkit-touch-callout: none; touch-action: manipulation;
+  transition: color var(--dur) var(--ease);
+}
+.principal:hover { color: var(--pergamino); }
+.icono { font-size: 16px; line-height: 1; }
+.pulgar { flex: none; }
+
+/* Barra de 6 emojis encima del botón, en una cápsula Velo */
+.barra {
+  position: absolute; bottom: calc(100% + 6px); left: -8px; z-index: 5;
+  display: flex; gap: 2px; padding: 6px;
+  background: var(--velo-2); border: 1px solid var(--velo-3); border-radius: 999px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  animation: aparecer 180ms var(--ease);
+}
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(6px) scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+.emoji {
+  display: grid; place-items: center; width: 40px; height: 40px;
+  font-size: 26px; line-height: 1; border-radius: 50%;
+  transition: transform 160ms var(--ease), background-color var(--dur) var(--ease);
+}
+.emoji:hover, .emoji:focus-visible { transform: translateY(-4px) scale(1.18); }
+.elegido { background: color-mix(in srgb, var(--oro-grial) 18%, transparent); }
+
+.resumen { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--pergamino-2); padding: 4px 0; }
+.resumen:hover { color: var(--pergamino); }
+.pila { display: inline-flex; }
+.pila > span {
+  display: grid; place-items: center; width: 20px; height: 20px; margin-left: -4px;
+  font-size: 13px; line-height: 1; border-radius: 50%;
+  background: var(--velo-2); box-shadow: 0 0 0 2px var(--noche);
+}
+.pila > span:first-child { margin-left: 0; }
+
+.desglose {
+  position: absolute; top: calc(100% + 4px); left: 0; z-index: 5; min-width: 180px;
+  list-style: none; display: flex; flex-direction: column; gap: 4px; padding: 10px 12px;
+  font-size: 13px; color: var(--pergamino-2);
+  background: var(--velo-1); border: 1px solid var(--velo-3); border-radius: var(--radius-md);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+.desglose strong { margin-left: auto; color: var(--pergamino); font-weight: 600; }
+.desglose li { display: flex; gap: 8px; align-items: center; }
+
+/* Avisos flotando bajo el botón, para no mover la fila de acciones */
+.aviso, .error {
+  position: absolute; top: calc(100% + 4px); left: 0; z-index: 5; white-space: nowrap;
+  padding: 6px 10px; font-size: 13px; border-radius: var(--radius-sm);
+  background: var(--velo-1); border: 1px solid var(--velo-3);
+}
+.aviso a { color: var(--oro-grial); font-weight: 600; }
+.aviso a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.error { color: var(--rojo-sello-hover); white-space: normal; width: max-content; max-width: min(80vw, 420px); }
+
+@media (max-width: 480px) {
+  .emoji { width: 36px; height: 36px; font-size: 23px; }
+}

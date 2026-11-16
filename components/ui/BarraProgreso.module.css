@@ -1,0 +1,2 @@
+.barra { height: 4px; border-radius: 2px; background: var(--velo-3); overflow: hidden; }
+.barra span { display: block; height: 100%; background: var(--ruta); }

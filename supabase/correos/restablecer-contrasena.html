@@ -1,0 +1,45 @@
+<!-- AKASHA · plantilla de correo para Supabase (Reset Password). Pegar en Authentication → Emails → Templates. -->
+<div style="margin:0;padding:0;background:#0c0b10;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#0c0b10;">
+    <tr>
+      <td align="center" style="padding:40px 16px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:520px;">
+          <!-- Logo -->
+          <tr>
+            <td align="center" style="padding:0 0 28px;font-family:Georgia,'Times New Roman',serif;font-size:26px;letter-spacing:8px;color:#efe9df;">
+              <span style="color:#c9a45c;">&#9670;</span>&nbsp;AKASHA
+            </td>
+          </tr>
+          <!-- Tarjeta -->
+          <tr>
+            <td style="background:#16141c;border:1px solid #2e2a36;border-radius:8px;padding:36px 32px;">
+              <p style="margin:0 0 14px;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;letter-spacing:2px;color:#c9a45c;text-align:center;">&#12304;&nbsp;RECUPERAR ACCESO&nbsp;&#12305;</p>
+              <h1 style="margin:0 0 18px;font-family:Georgia,'Times New Roman',serif;font-size:30px;line-height:36px;font-weight:normal;color:#efe9df;text-align:center;">Elige una contraseña nueva</h1>
+              <p style="margin:0 0 28px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:26px;color:#a49c92;text-align:center;">Hemos recibido una petición para cambiar la contraseña de tu cuenta. El enlace sirve una sola vez y caduca en una hora.</p>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
+                <tr>
+                  <td align="center" bgcolor="#c21a23" style="border-radius:4px;">
+                    <a href="{{ .ConfirmationURL }}" target="_blank" style="display:inline-block;padding:14px 28px;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;color:#efe9df;text-decoration:none;border-radius:4px;">&#9670;&nbsp;&nbsp;Cambiar mi contraseña</a>
+                  </td>
+                </tr>
+              </table>
+              <!-- Filete dorado -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:32px 0 20px;">
+                <tr><td style="border-top:1px solid #4a3f2b;font-size:0;line-height:0;">&nbsp;</td></tr>
+              </table>
+              <p style="margin:0 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:20px;color:#a49c92;text-align:center;">Si el botón no funciona, copia este enlace en tu navegador:</p>
+              <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:18px;text-align:center;word-break:break-all;"><a href="{{ .ConfirmationURL }}" style="color:#c9a45c;">{{ .ConfirmationURL }}</a></p>
+            </td>
+          </tr>
+          <!-- Pie -->
+          <tr>
+            <td style="padding:24px 8px 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:19px;color:#6f6860;text-align:center;">
+              Si no lo pediste tú, ignora este correo: tu contraseña no cambiará.<br>
+              <span style="font-family:Georgia,'Times New Roman',serif;font-style:italic;color:#a49c92;">Todas las rutas llevan a la Raíz.</span>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>

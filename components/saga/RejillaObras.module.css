@@ -1,0 +1,7 @@
+.seccion { padding: 8px var(--gutter) 48px; }
+.titulo { font-family: var(--ff-display); font-weight: 500; font-size: var(--fs-h2); line-height: var(--lh-h2); margin-bottom: 20px; }
+.rejilla { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 28px 16px; }
+
+@media (max-width: 760px) {
+  .rejilla { grid-template-columns: repeat(2, 1fr); }
+}
